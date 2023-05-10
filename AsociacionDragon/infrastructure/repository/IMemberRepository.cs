@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace asociacionDragon.infrastructure.repository
 {
-    public interface GameRepository
+    public interface IMemberRepository
     {
-        List<Game> GetAll();
-        void Upsert(Game game);
+        List<Member> GetAll();
+        void Upsert(Member member);
 
         void Delete(Guid id);
     }

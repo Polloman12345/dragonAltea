@@ -11,9 +11,9 @@ namespace asociacionDragon.application
 {
     public class GameService
     {
-        private readonly GameRepository _gameRepository;
+        private readonly IGameRepository _gameRepository;
 
-        public GameService(GameRepository gameRepository)
+        public GameService(IGameRepository gameRepository)
         {
             _gameRepository = gameRepository;
         }

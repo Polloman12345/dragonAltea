@@ -11,9 +11,9 @@ namespace asociacionDragon.application
 {
     public class MemberService
     {
-        private readonly MemberRepository _memberRepository;
+        private readonly IMemberRepository _memberRepository;
 
-        public MemberService(MemberRepository memberRepository)
+        public MemberService(IMemberRepository memberRepository)
         {
             _memberRepository = memberRepository;
         }

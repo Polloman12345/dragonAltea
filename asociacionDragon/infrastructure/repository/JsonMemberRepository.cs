@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace asociacionDragon.infrastructure.repository
 {
-    public class JsonMemberRepository : MemberRepository
+    public class JsonMemberRepository : IMemberRepository
     {
         private readonly string _filePath;
 

@@ -28,44 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            SuspendLayout();
+            this.btnGames = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.SuspendLayout();
             // 
-            // button1
+            // btnGames
             // 
-            button1.Location = new Point(12, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(306, 87);
-            button1.TabIndex = 0;
-            button1.Text = "Juegos";
-            button1.UseVisualStyleBackColor = true;
+            this.btnGames.Location = new System.Drawing.Point(12, 12);
+            this.btnGames.Name = "btnGames";
+            this.btnGames.Size = new System.Drawing.Size(306, 87);
+            this.btnGames.TabIndex = 0;
+            this.btnGames.Text = "Juegos";
+            this.btnGames.UseVisualStyleBackColor = true;
+            this.btnGames.Click += new System.EventHandler(this.btnGames_Click);
             // 
             // button2
             // 
-            button2.Location = new Point(12, 105);
-            button2.Name = "button2";
-            button2.Size = new Size(306, 87);
-            button2.TabIndex = 1;
-            button2.Text = "Socios";
-            button2.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(12, 105);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(306, 87);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Socios";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(339, 203);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "Menu";
-            Text = "Form1";
-            Load += Menu_Load;
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(339, 203);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGames);
+            this.Name = "Menu";
+            this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
-        private Button button1;
+        private Button btnGames;
         private Button button2;
     }
 }

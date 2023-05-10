@@ -21,32 +21,25 @@ namespace asociacionDragon
             listView1.Columns.Add("Fecha", 100);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            refreshList();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            using (AddGameForm addGameForm = new AddGameForm())
-            {
-                if (addGameForm.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-                {
-                    Game game = addGameForm.game;
-                    _gameService.SaveGame(game);
-                    refreshList();
-                }
+            using var addGameForm = new AddGameForm();
 
-            }
+            if (addGameForm.ShowDialog() != DialogResult.OK)
+                return;
+
+            Game game = addGameForm.game;
+            _gameService.SaveGame(game);
+            refreshList();
         }
 
         private void refreshList()
         {
             listView1.Items.Clear();
-            List<Game> games = _gameService.GetAllGames();
-            foreach (Game game in games)
+            var games = _gameService.GetAllGames();
+            foreach (var game in games)
             {
-                ListViewItem item = new ListViewItem(game.Id.ToString());
+                var item = new ListViewItem(game.Id.ToString());
                 item.SubItems.Add(game.Name);
                 item.SubItems.Add(game.Price);
                 item.SubItems.Add(game.CreationDate.ToString());
@@ -56,7 +49,7 @@ namespace asociacionDragon
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Guid> selectedElements = listView1.Items.Cast<ListViewItem>()
+            var selectedElements = listView1.Items.Cast<ListViewItem>()
                                               .Where(item => item.Checked)
                                               .Select(item => item.SubItems[0].Text)
                                               .Select(id => Guid.Parse(id))
@@ -68,10 +61,16 @@ namespace asociacionDragon
 
         private void GameList_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            Menu menu = new();
-            menu.Show(); 
-            this.Hide();
+            //e.Cancel = true;
+            //Menu menu = new();
+            //menu.Show(); 
+            //this.Hide();
+        }
+
+        private void GameList_Load(object sender, EventArgs e)
+        {
+
+            refreshList();
         }
     }
 }

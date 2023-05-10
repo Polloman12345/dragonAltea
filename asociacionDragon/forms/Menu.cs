@@ -1,4 +1,6 @@
-﻿using System;
+﻿using asociacionDragon.application;
+using asociacionDragon.infrastructure.repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,22 @@ namespace asociacionDragon.forms
 {
     public partial class Menu : Form
     {
-        public Menu()
+        private readonly GameList gameList;
+
+        public Menu(GameList gameList)
         {
             InitializeComponent();
+            this.gameList = gameList;
         }
 
         private void Menu_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGames_Click(object sender, EventArgs e)
+        {
+            gameList.ShowDialog();
         }
     }
 }

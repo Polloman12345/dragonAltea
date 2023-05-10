@@ -28,83 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // button1
             // 
-            button1.DialogResult = DialogResult.OK;
-            button1.Location = new Point(150, 143);
-            button1.Name = "button1";
-            button1.Size = new Size(107, 22);
-            button1.TabIndex = 0;
-            button1.Text = "Ok";
-            button1.UseVisualStyleBackColor = true;
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Location = new System.Drawing.Point(150, 143);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(107, 22);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Ok";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            button2.DialogResult = DialogResult.Cancel;
-            button2.Location = new Point(37, 143);
-            button2.Name = "button2";
-            button2.Size = new Size(107, 22);
-            button2.TabIndex = 1;
-            button2.Text = "Cancelar";
-            button2.UseVisualStyleBackColor = true;
+            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button2.Location = new System.Drawing.Point(37, 143);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(107, 22);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(68, 29);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(166, 23);
-            textBox1.TabIndex = 2;
-            textBox1.TextChanged += textBox1_TextChanged;
+            this.textBox1.Location = new System.Drawing.Point(68, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(166, 23);
+            this.textBox1.TabIndex = 2;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(68, 71);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 23);
-            textBox2.TabIndex = 3;
-            textBox2.TextChanged += textBox2_TextChanged;
+            this.textBox2.Location = new System.Drawing.Point(68, 71);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(166, 23);
+            this.textBox2.TabIndex = 3;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(10, 32);
-            label1.Name = "label1";
-            label1.Size = new Size(51, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Nombre";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nombre";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(10, 74);
-            label2.Name = "label2";
-            label2.Size = new Size(40, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Precio";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 74);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Precio";
             // 
             // AddGameForm
             // 
-            ClientSize = new Size(284, 183);
-            ControlBox = false;
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Name = "AddGameForm";
-            Text = "Añadir juego";
-            Load += AddGameForm_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.ClientSize = new System.Drawing.Size(284, 183);
+            this.ControlBox = false;
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Name = "AddGameForm";
+            this.Text = "Añadir juego";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
